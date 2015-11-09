@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Docker10 by wangfakang</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Docker10</h1>
+        <p class="header">docker compose  swarm machine simply study</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/wangfakang/docker10/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/wangfakang/docker10/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/wangfakang/docker10">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/wangfakang">wangfakang</a></p>
+
+
+      </header>
+      <section>
+        <p><code>docker的生态圈Machine、Swarm、Compose:</code></p>
+
+<p>　　machine,swarm,compose俗称docker的三剑客，通过machine解决docker的运行环境，compose管理dockerfile的编译，
+通过swarm进行管理docker的集群以及如何进行调度负载． 　　</p>
+
+<h1>
+<a id="machine" class="anchor" href="#machine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Machine：</h1>
+
+<p>　解决的是操作系统异构安装Docker困难的问题，没有Machine的时候，CentOS是一种，Ubuntu又是一种，AWS又是一种。
+有了Machine，所有的系统都是一样的安装方式。<br>
+　<a href="https://github.com/docker/machine">项目地址</a></p>
+
+<h1>
+<a id="swarm" class="anchor" href="#swarm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Swarm：</h1>
+
+<p>　　我们有了Machine就意味着有了docker环境，但是那是单机的，而通常我们的应用都是集群的。这正是Swarm要做的事情，
+给你提供docker集群环境和调度策略等。<br>
+调度策略：<br>
+　　在执行swarm manage命令启动 swarm 集群的时候可以通过 --strategy 参数来指定，默认的是spread.<br>
+    spread和binpack策略会根据每台节点的可用CPU，内存以及正在运行的containers的数量来给各个节点分级，
+而random策略是随机的一种．<br>
+　　其中spread是会根据swarm会选择一个正在运行的container的数量最少的那个节点来运行container．
+　　　　binpack 则相反，这种情况下，swarm会尽可能的把所有的容器放在一台节点上面运行。这种策略会避免容器碎片化，
+因为他会把未使用的机器分配给更大的容器．<br>
+    <a href="https://github.com/docker/swarm">项目地址</a></p>
+
+<h1>
+<a id="compose" class="anchor" href="#compose" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compose：</h1>
+
+<p>　　　Dockerfile 可以让用户管理一个单独的应用容器；而 Compose 则允许用户在一个模板（YAML 格式）中定义一组相关联
+的应用容器（被称为一个 project，即项目），比如一个 Web 服务容器再加上后端的数据库服务容器等。Compose简化了这个流程，
+只需要把这些内容固话到docker-compose.yml中。<br>
+<a href="https://github.com/docker/compose">项目地址</a></p>
+
+<p>目前Machine、Swarm、Compose已经可以结合使用，创建集群环境，简单的在上面部署应用。</p>
+
+<h1>
+<a id="欢迎一起交流学习-" class="anchor" href="#%E6%AC%A2%E8%BF%8E%E4%B8%80%E8%B5%B7%E4%BA%A4%E6%B5%81%E5%AD%A6%E4%B9%A0-" aria-hidden="true"><span class="octicon octicon-link"></span></a>欢迎一起交流学习 </h1>
+
+<p>在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流</p>
+
+<ul>
+<li>邮件(1031379296#qq.com, 把#换成@)</li>
+<li>QQ: 1031379296</li>
+<li>weibo: <a href="http://weibo.com/u/2786211992/home">@王发康</a>
+</li>
+</ul>
+
+<h1>
+<a id="thx" class="anchor" href="#thx" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thx</h1>
+
+<ul>
+<li>chunshengsterATgmail.com</li>
+</ul>
+
+<h1>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h1>
+
+<ul>
+<li>Linux\nginx\golang\c\c++爱好者</li>
+<li>欢迎一起交流  一起学习# </li>
+<li>Others say good and Others good</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("docker compose  swarm machine");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
